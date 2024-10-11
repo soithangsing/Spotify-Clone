@@ -15,6 +15,14 @@
     url(./assets/fonts/SpotifyMix/SpotifyMix-Regular.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: "Spotify Mix Bold";
+    src: url(./assets/fonts/SpotifyMix/SpotifyMix-Bold.eot.eot) format('embedded-opentype'),
+    url(./assets/fonts/SpotifyMix/SpotifyMix-Bold.woff) format('woff'),
+    url(./assets/fonts/SpotifyMix/SpotifyMix-Bold.woff2) format('woff2'),
+    url(./assets/fonts/SpotifyMix/SpotifyMix-Bold.ttf) format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -247,14 +255,48 @@ main {
     overflow-x: hidden;
     height: 79vh;
     width: 100%;
+
+    background-color: #101815;
+    color: white;
+}
+
+.main-top-section {
+    background-color: #21115D;
+}
+
+.main-page-selector {
+    display: flex;
+    margin-left: 15px;
+    padding-top: 15px;
+    gap: 8px;
+}
+
+.page-button {
+    border-radius: 50px;
+    background-color:rgba(255,255,255, 0.1);
+    color: white;
+    padding: 8px;
+}
+
+.page-button:hover {
+    cursor: pointer;
+}
+
+.all {
+    background-color: white;
+    color: black;
+}
+
+.music:hover,
+.podcast:hover {
+    background-color:rgba(255,255,255, 0.3);
 }
 
 .user-playlists {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    background-color: #21115D;
-    padding: 60px 15px 20px 15px;
+    padding: 20px 15px 20px 15px;
     gap: 16px;
 
 }
@@ -264,8 +306,7 @@ main {
     display: flex;
     color: white;
     background-color:rgba(255,255,255, 0.2);
-
-    font-family: "Spotify Mix Black";
+    border-radius: 5px;
 }
 
 .user-playlist-card:hover {
@@ -275,12 +316,42 @@ main {
 
 .user-playlist-card img {
     width: 60px;
-    box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 5px 0px 2px rgba(0, 0, 0, 0.5); */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .user-playlist-card-text {
+    font-family: "Spotify Mix Bold", sans-serif;
     margin-left: 15px;
     align-self: center;
+}
+
+.main-card {
+    display: flex;
+    flex-direction: column;
+    /* padding: 15px; */
+
+    font-size: 12px;
+    color: #A6B3B3;
+    border-color: 2px solid yellow;
+}
+
+.main-card img {
+    width: 150px;
+}
+
+.main-cards-container {
+    display: flex;
+}
+
+.recommended-cards-heading {
+    font-family: "Spotify Mix Bold", sans-serif;
+    font-size: 1.6rem;
+}
+
+.recommended-cards {
+    margin-left: 50px;
 }
 
 /* Main content end */
