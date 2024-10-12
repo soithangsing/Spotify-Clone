@@ -181,7 +181,7 @@ main {
 }
 
 .nav-left.active {
-    width: 26vw;
+    width: 35vw;
     /* padding: 1rem 2rem; */
 }
 
@@ -275,7 +275,7 @@ main {
     border-radius: 50px;
     background-color:rgba(255,255,255, 0.1);
     color: white;
-    padding: 8px;
+    padding: 5px 9px;
 }
 
 .page-button:hover {
@@ -307,18 +307,36 @@ main {
     color: white;
     background-color:rgba(255,255,255, 0.2);
     border-radius: 5px;
+
+    position: relative;
 }
 
 .user-playlist-card:hover {
-    background-color:rgba(255,255,255, 0.6);
+    background-color:rgba(255,255,255, 0.4);
     cursor: pointer;
 }
 
-.user-playlist-card img {
+.user-playlist-card:hover .play-button-misc {
+    opacity: 1;
+}
+
+.play-button-misc:hover {
+    transform: scale(1.15);
+}
+
+.user-playlist-card .card-preview-img {
     width: 60px;
     /* box-shadow: 5px 0px 2px rgba(0, 0, 0, 0.5); */
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+}
+
+.play-button-misc {
+    position: absolute;
+    width: 52px;
+    top: 6px;
+    right: 8px;
+    opacity: 0;
 }
 
 .user-playlist-card-text {
@@ -330,28 +348,135 @@ main {
 .main-card {
     display: flex;
     flex-direction: column;
+    gap: 15px;
     /* padding: 15px; */
 
     font-size: 12px;
     color: #A6B3B3;
     border-color: 2px solid yellow;
+
+    position: relative;
 }
 
-.main-card img {
-    width: 150px;
+.main-card .main-preview-img {
+    width: 180px;
+    border-radius: 5px;
+}
+
+.main-card:hover .play-button-main-card {
+    opacity: 1;
+}
+
+.main-card:hover {
+    cursor: pointer;
 }
 
 .main-cards-container {
     display: flex;
+    padding: 10px;
+    gap: 30px;
 }
 
 .recommended-cards-heading {
+    
+    margin-left: 10px;
+}
+
+.recommended-cards-heading a {
+    text-decoration: none;
     font-family: "Spotify Mix Bold", sans-serif;
     font-size: 1.6rem;
+    color: white;
+}
+
+.recommended-cards-heading a:hover {
+    text-decoration: underline;
 }
 
 .recommended-cards {
-    margin-left: 50px;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.play-button-main-card {
+    width: 50px;
+    position: absolute;
+    right: 9px;
+    bottom: 36px;
+    opacity: 0;
+}
+
+hr {
+    width: 100%;
+    border-color: #1E1E1E;
+}
+
+footer {
+    margin-top: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.f-row-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-col-group-1 {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-col ul{
+    list-style: none;
+}
+
+.footer-col li {
+    margin-top: 6px;
+}
+
+.footer-col li a {
+    text-decoration: none;
+    color: #A6B3B3;
+}
+
+.footer-col li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.f-row-2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+
+    margin-top: 35px;
+    margin-bottom: 100px;
+}
+
+
+.row-2-group-1 {
+    display: flex;
+    gap: 20px;
+}
+
+.row-2-group-1 a {
+    text-decoration: none;
+    color: #A6B3B3;
+}
+
+.row-2-group-1 a:hover {
+    color: #fff;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-icons img {
+    width: 25px;
 }
 
 /* Main content end */
