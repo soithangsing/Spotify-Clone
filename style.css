@@ -241,11 +241,11 @@ main {
 
 .nav-left::-webkit-scrollbar-track {
     background: transparent;
-  }
+}
 
   .nav-left::-webkit-scrollbar-thumb {
     background: #898989;
-  }
+}
 
 /* Scroll bar end */
 
@@ -270,6 +270,22 @@ main {
     padding-top: 15px;
     gap: 8px;
 }
+
+/* Main scrollbar */
+
+.main-content::-webkit-scrollbar {
+    width: 12px;
+  }
+
+.main-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: #898989;
+}
+
+/* Main scrollbar end */
 
 .page-button {
     border-radius: 50px;
